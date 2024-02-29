@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website – Hilary Present</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f53f5d2ec3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Data Scientist</p>
+                <h1>I am <span>Hilary</span> Present</h1>
+                <h4>I am <span>Hilary</span> <br>Present</h4>
+                <p class="p-normal-screen">Passionate about Climate Tech</p>
+                <p class="p-small-screen">Passionate about <br>Climate Tech</p>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------about------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpeg">
+                    <img src="images/about2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome! I'm Hilary Present, a current graduate student about to finish my M.S. in Computational Data Science at Georgia Tech. 
+                        With a background in Cognitive Science and Computer Science, coupled with a passion for the outdoors, I've developed a deep 
+                        interest in leveraging data to drive impactful decisions, particularly in the realm of materials science and environmental sustainability.
+                        I am driven by a relentless pursuit of knowledge and improvement, and a dedication to using my skills for innovative, complex problem solving.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span><br>Python, R, JavaScript, HTML/CSS, C</li>
+                                <li><span>Machine Learning & Deep Learning</span><br>PyTorch, TensorFlow, Keras</li>
+                                <li><span>Data & Visualization</span><br>Pandas, NumPy, Tableau, D3.js</li>
+                                <li><span>Database & Data Manipulation</span><br>SQL, Hadoop, Spark</li>
+                                <li><span>Cloud Computing</span><br>Microsoft Azure, AWS, GCP</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Ramprasad Research Group</span><br>Research Assistant (Oct 2023 – Present)</li>
+                                <!-- <li><span>ATLytiCS Data for Hope™ Competition</span><br>Team Won Second Place (Aug 2023 – Sep 2023)</li> -->
+                                <li><span>Matmerize</span><br>Business Strategy Analyst (Jan 2024 – May 2024)</li>
+                                <li><span>HercTech</span><br>Data Analyst (Dec 2020 – Present)</li>
+                                <li><span>Easy Day Sports</span><br>Marketing Coordinator and Analyst (Sep 2022 – Jul 2023)</li>
+                                <li><span>ILINX LLC</span><br>Founder and CEO (Apr 2020 – Sep 2022)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Georgia Institute of Technology</span><br>M.S. in Analytics, Computational Data Science Track (Aug 2023 – Aug 2024)</li>
+                                <li><span>University of Virginia</span><br>Dual B.A. in Cognitive Science and Media Studies, Computer Science Track (Aug 2017 – May 2021)</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------expertise------------------- -->
+    <div id="expertise">
+        <div class="container">
+            <h1 class="sub-title">Expertise</h1>
+            <div class="expertise-list">
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Data Analysis</h2>
+                    <p>Utilizing statistical modeling and machine learning to extract insights from complex datasets.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Machine Learning</h2>
+                    <p>Building predictive models and neural networks to solve real-world problems in various domains.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-recycle"></i>
+                    <h2>Materials Science</h2>
+                    <p>Applying data science techniques to accelerate the discovery and development of novel materials.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------portfolio------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/ocean.jpg">
+                    <div class="layer">
+                        <h3>Geospatial Analysis of Plastics in the Ocean</h3>
+                        <p>A visual analysis project aimed at understanding the distribution and impact of plastic pollution in our oceans.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/twitter.jpg">
+                    <div class="layer">
+                        <h3>Tweet Sentiment Analysis</h3>
+                        <p>Utilizing natural language processing (NLP) techniques to analyze and classify the sentiment of tweets on social media.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/polymer.jpg">
+                    <div class="layer">
+                        <h3>Polymer Classification with Neural Networks</h3>
+                        <p>Applying deep learning methods to classify and predict the properties of polymers for materials science applications.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- -------------------contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>123.456.7890</p>
+                    <div class="social-icons">
+                        <!-- or <i class="fa-brands fa-linkedin-in"></i> -->
+                        <a href="https://github.com/hilpresent"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hilarypresent/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100006857775780"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="HilaryPresentResume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <span id="msg"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Hilary Present. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbznfbGvCd6q6XUPrTNfZmGVG0uUPkYRxPRanIpBvauUpRLlzH-KXAww1fxCV-4p_z8rLQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    </body>
+</html>
