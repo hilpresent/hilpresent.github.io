@@ -5,8 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio Website – Hilary Present</title>
+        <link rel="icon" href="/images/portfolio.png" type="image/png">
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/f53f5d2ec3.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     </head>
     <body>
     <div id="header">
@@ -19,16 +21,13 @@
                     <li><a href="#expertise">Expertise</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Data Scientist</p>
                 <h1>I am <span>Hilary</span> Present</h1>
-                <h4>I am <span>Hilary</span> <br>Present</h4>
-                <p class="p-normal-screen">Passionate about Climate Tech</p>
-                <p class="p-small-screen">Passionate about <br>Climate Tech</p>
+                <p>Data Scientist</p>
             </div>
         </div>
     </div>
@@ -50,6 +49,7 @@
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
                             <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('competitions')">Competitions and Awards</p>
                             <p class="tab-links" onclick="opentab('fun-facts')">Fun Facts</p>
                         </div>
                         <div class="tab-contents active-tab" id="skills">
@@ -63,18 +63,22 @@
                         </div>
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Ramprasad Research Group</span><br>Research Assistant (Oct 2023 – Present)</li>
-                                <!-- <li><span>ATLytiCS Data for Hope™ Competition</span><br>Team Won Second Place (Aug 2023 – Sep 2023)</li> -->
-                                <li><span>Matmerize</span><br>Business Strategy Analyst (Jan 2024 – May 2024)</li>
-                                <li><span>HercTech</span><br>Data Analyst (Dec 2020 – Present)</li>
-                                <li><span>Easy Day Sports</span><br>Marketing Coordinator and Analyst (Sep 2022 – Jul 2023)</li>
-                                <li><span>ILINX LLC</span><br>Founder and CEO (Apr 2020 – Sep 2022)</li>
+                                <li><span>Ramprasad Research Group</span><br>Research Assistant (2023 – Present)</li>
+                                <li><span>Matmerize</span><br>Business Strategy Analyst (Jan 2024 – Present)</li>
+                                <li><span>HercTech</span><br>Data Analyst (2020 – Present)</li>
+                                <li><span>Easy Day Sports</span><br>Marketing Coordinator and Analyst (2022 – 2023)</li>
+                                <li><span>ILINX LLC</span><br>Founder and CEO (2020 – 2022)</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>Georgia Institute of Technology</span><br>M.S. in Analytics, Computational Data Science Track (Aug 2023 – Aug 2024)</li>
                                 <li><span>University of Virginia</span><br>Dual B.A. in Cognitive Science and Media Studies, Computer Science Track (Aug 2017 – May 2021)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="competitions">
+                            <ul>
+                                <li><span>ATLytiCS Data for Hope™ Competition</span><br>Team Won Second Place; Prize of $2000 (2023)</li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="fun-facts">
@@ -86,6 +90,7 @@
                         </div>
                 </div>
             </div>
+            
         </div>
     </div>
     <!-- -------------------expertise------------------- -->
@@ -97,19 +102,19 @@
                     <i class="fa-solid fa-chart-line"></i>
                     <h2>Data Analysis</h2>
                     <p>Utilizing statistical modeling and machine learning to extract insights from complex datasets.</p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
                 <div>
                     <i class="fa-solid fa-laptop-code"></i>
                     <h2>Machine Learning</h2>
                     <p>Building predictive models and neural networks to solve real-world problems in various domains.</p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
                 <div>
                     <i class="fa-solid fa-recycle"></i>
                     <h2>Materials Science</h2>
                     <p>Applying data science techniques to accelerate the discovery and development of novel materials.</p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
             </div>
         </div>
@@ -146,23 +151,26 @@
                 <div class="work">
                     <img src="images/todo_preview.png">
                     <div class="layer">
-                        <h3>To-Do List</h3>
+                        <h3>Task List Web Application</h3>
                         <p>This interactive to-do list app built with HTML, CSS, and JavaScript, featuring local storage for task persistence and a clean, responsive design. Users can add, edit, and delete tasks, as well as mark them as completed with intuitive controls.</p>
-                        <a href="todo_index.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View To-Do List</a>
+                        <a href="projects/todo_list/todo_index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <a id="see-more-btn" class="btn">See more</a>
+            <a id="collapse-btn" class="btn" style="display: none;">Collapse</a>
         </div>
     </div>
+
+
     <!-- -------------------contact------------------- -->
     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
-                    <p><i class="fa-solid fa-phone"></i>123.456.7890</p>
+                    <p><i class="fa-solid fa-paper-plane"></i><a class="contact-me" href="mailto:hpresent6@gatech.edu">hpresent6@gatech.edu</a></p>
+                    <p><i class="fa-solid fa-phone"></i><a class="contact-me" href="tel:+16197867074">619.786.7074</a></p>
                     <div class="social-icons">
                         <!-- or <i class="fa-brands fa-linkedin-in"></i> -->
                         <a href="https://github.com/hilpresent"><i class="fa-brands fa-github"></i></a>
@@ -187,52 +195,7 @@
         </div>
     </div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
-        
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById("sidemenu")
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbznfbGvCd6q6XUPrTNfZmGVG0uUPkYRxPRanIpBvauUpRLlzH-KXAww1fxCV-4p_z8rLQ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-    
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+   <script src="script.js"></script>
 
     </body>
 </html>
