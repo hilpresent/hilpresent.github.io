@@ -2,12 +2,12 @@
 /* main highlight color: #1467d2 */
 
 :root {
-    --royal: #1467d2;
-    --dark_blue: #0f4eb0;
-    --background: #2e2e2e;
-    --dark_accent: #1a1a1a;
-    --white: #fff;
-    --section_headers: #ababab;
+    --royal: #e07b9a; /* Soft Pink */
+    --dark_blue: #6a5acd; /* Slate Blue */
+    --background: #f0f0f5; /* Light Gray */
+    --dark_accent: #483d8b; /* Dark Slate Blue */
+    --white: #fff; /* White */
+    --section_headers: #d8bfd8; /* Thistle */
 }
 
 html, body {
