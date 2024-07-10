@@ -10,6 +10,11 @@ function closemenu() {
     document.querySelector(".fas.fa-bars").style.display = "block";
 }
 
+window.onload = function() {
+    gsap.from(".header-text h1", {duration: 1, opacity: 0, y: -50, ease: "power2.out"});
+    gsap.from(".header-text p", {duration: 1, opacity: 0, y: 50, ease: "power2.out", delay: 0.5});
+  }
+
 
 // Tab navigation functions
 var tablinks = document.getElementsByClassName("tab-links");
