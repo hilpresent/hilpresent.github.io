@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.height = window.innerHeight;
 
     let particlesArray = [];
-    const numberOfParticles = 300;
+    const numberOfParticles = 125;
     const mouseRadius = 100; // Adjust this value to increase/decrease the radius around the mouse
 
     const mouse = {
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
             this.size = Math.random() * 5 + 1;
-            this.speedX = (Math.random() * 1 - 0.5) / 2; // Slower speed
-            this.speedY = (Math.random() * 1 - 0.5) / 2; // Slower speed
-            this.opacity = 0; // Start with 0 opacity
+            this.speedX = (Math.random() * 1 - 0.5) / 2; // increase denominator to slow speed
+            this.speedY = (Math.random() * 1 - 0.5) / 2; // increase denominator to slow speed
+            this.opacity = 0; // start with 0 opacity
         }
         update() {
             this.x += this.speedX;
@@ -130,15 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.y -= Math.sin(angle);
             }
 
-            if (this.size > 0.2) this.size -= 0.01;
+            if (this.size > 0.2) this.size -= 0.02;
             if (this.opacity < 1) this.opacity += 0.02; // Gradually increase opacity
 
             if (this.size <= 0.2) {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 5 + 1;
-                this.speedX = (Math.random() * 1 - 0.5) / 6; // Slower speed
-                this.speedY = (Math.random() * 1 - 0.5) / 6; // Slower speed
+                this.speedX = (Math.random() * 1 - 0.5) / 4; // increase denominator to slow speed
+                this.speedY = (Math.random() * 1 - 0.5) / 4; // increase denominator to slow speed
                 this.opacity = 0; // Reset opacity for new particle
             }
         }
